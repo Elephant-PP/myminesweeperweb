@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>扫雷</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>扫雷</h1>
+
+    <div class="controls">
+      <div class="difficulty">
+        <button class="diff-btn active" data-diff="beginner">
+          <span class="diff-label">初级</span>
+          <span class="diff-info">9×9</span>
+        </button>
+        <button class="diff-btn" data-diff="intermediate">
+          <span class="diff-label">中级</span>
+          <span class="diff-info">16×16</span>
+        </button>
+        <button class="diff-btn" data-diff="expert">
+          <span class="diff-label">专家</span>
+          <span class="diff-info">30×16</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="game-panel" id="game-panel">
+      <div class="info-bar">
+        <div class="counter" id="mine-counter">
+          <span class="counter-icon">💣</span>
+          <span class="counter-value">010</span>
+        </div>
+        <button class="reset-btn" id="reset-btn">😊</button>
+        <div class="counter" id="timer">
+          <span class="counter-icon">⏱</span>
+          <span class="counter-value">000</span>
+        </div>
+      </div>
+
+      <div class="board-wrapper" id="board-wrapper">
+        <div class="board" id="board"></div>
+      </div>
+    </div>
+
+    <div class="footer">
+      左键挖开 · 右键标旗 · <span class="key-hint">R</span> 重置
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <div class="modal-icon" id="modal-icon">🎉</div>
+      <div class="modal-title" id="modal-title"></div>
+      <div class="modal-stats" id="modal-stats"></div>
+      <div class="modal-detail" id="modal-detail"></div>
+      <button class="modal-btn" id="modal-btn">再来一局</button>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
