@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>扫雷</title>
+  <title id="page-title">扫雷</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-    <h1>扫雷</h1>
+    <h1 data-i18n="title">扫雷</h1>
 
     <div class="controls">
       <div class="difficulty">
         <button class="diff-btn active" data-diff="beginner">
-          <span class="diff-label">初级</span>
+          <span class="diff-label" data-i18n="beginner">初级</span>
           <span class="diff-info">9×9</span>
         </button>
         <button class="diff-btn" data-diff="intermediate">
-          <span class="diff-label">中级</span>
+          <span class="diff-label" data-i18n="intermediate">中级</span>
           <span class="diff-info">16×16</span>
         </button>
         <button class="diff-btn" data-diff="expert">
-          <span class="diff-label">专家</span>
+          <span class="diff-label" data-i18n="expert">专家</span>
           <span class="diff-info">30×16</span>
         </button>
+      </div>
+
+      <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="zh">中</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
 
@@ -45,7 +50,7 @@
       </div>
     </div>
 
-    <div class="footer">
+    <div class="footer" id="game-footer">
       左键挖开 · 右键标旗 · <span class="key-hint">R</span> 重置
     </div>
   </div>
